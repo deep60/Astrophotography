@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct AstrophotographyApp: App {
+    
+    @Environment(\.openWindow) private var openWindow
+    
+    public init() {}
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
+        .windowStyle(.hiddenTitleBar)
     }
 }
