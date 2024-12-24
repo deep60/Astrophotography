@@ -38,7 +38,7 @@ struct ExposureView: View {
     public var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Image(systemName: "camera.fill")
+                Image(systemName: "camera.shutter.button.fill")
                 Text("Exposure Time Eqivalent").font(.title)
             }
             
@@ -51,11 +51,41 @@ struct ExposureView: View {
                     }
                 }
                 .frame(minHeight: 20)
+                
+                GridRow {
+                    Text("Exposure Time 1: ").foregroundStyle(.secondary)
+                    TextField("", value: $f1, format: .number).textFieldStyle(.roundedBorder)
+                    TimeMenuView() {
+                        self.t1 = Double($0.seconds)
+                    }
+                }
+                .frame(minHeight: 20)
+                
+                GridRow {
+                    Text("Focal Ratio 2: ").foregroundStyle(.secondary)
+                    TextField("", value: $f1, format: .number).textFieldStyle(.roundedBorder)
+                    TelescopeMenu() {
+                        self.f2 = $0.focalRatio
+                    }
+                }
+                .frame(minHeight: 20)
+                
+                GridRow {
+                    Text("Exposure Time 2: ").foregroundStyle(.secondary)
+                    Text(self.t2.description)
+                }
+                .frame(minHeight: 20)
+                
+                GridRow {
+                    Text("Ratio: ").foregroundStyle(.secondary)
+                    Text(self.ratio)
+                }
+                .frame(minHeight: 20)
             }
         }
     }
 }
 
 #Preview {
-    ExposureView()
+    ExposureView().padding()
 }

@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DB683F9C2D19545E00921C2D /* TimeMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB683F9B2D19545E00921C2D /* TimeMenuView.swift */; };
+		DBEFDA7E2D18831200924696 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEFDA7D2D18831200924696 /* Time.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		DB683F9B2D19545E00921C2D /* TimeMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMenuView.swift; sourceTree = "<group>"; };
 		DBEFDA542D1636B200924696 /* Astrophotography.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astrophotography.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBEFDA7D2D18831200924696 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +39,8 @@
 		DBEFDA4B2D1636B200924696 = {
 			isa = PBXGroup;
 			children = (
+				DBEFDA7D2D18831200924696 /* Time.swift */,
+				DB683F9B2D19545E00921C2D /* TimeMenuView.swift */,
 				DBEFDA562D1636B200924696 /* Astrophotography */,
 				DBEFDA552D1636B200924696 /* Products */,
 			);
@@ -119,6 +128,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB683F9C2D19545E00921C2D /* TimeMenuView.swift in Sources */,
+				DBEFDA7E2D18831200924696 /* Time.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
