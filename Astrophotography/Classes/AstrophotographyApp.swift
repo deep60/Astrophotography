@@ -19,5 +19,20 @@ struct AstrophotographyApp: App {
             ContentView()
         }
         .windowStyle(.hiddenTitleBar)
+        .commands {
+            CommandGroup(replacing: CommandGroupPlacement.appInfo) {
+                Button(action: {
+                    openWindow(id: "AboutWindow")
+                }) {
+                    Text("About AstroPhotography Tools")
+                }
+            }
+        }
+        
+        Window("About AstroPhotography Tools", id: "AboutWindow") {
+            AbtView().padding().fixedSize()
+        }
+        .windowStyle(.hiddenTitleBar)
+        .windowResizability(.contentSize)
     }
 }
